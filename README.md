@@ -30,6 +30,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-mne--icalabel-green.svg)](https://anaconda.org/conda-forge/mne-icalabel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mne-icalabel.svg)](https://anaconda.org/conda-forge/mne-icalabel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mne-icalabel.svg)](https://anaconda.org/conda-forge/mne-icalabel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mne-icalabel.svg)](https://anaconda.org/conda-forge/mne-icalabel) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mne--icalabel--onnx-green.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mne-icalabel-onnx.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mne-icalabel-onnx.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mne-icalabel-onnx.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) |
 
 Installing mne-icalabel
 =======================
@@ -41,16 +42,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mne-icalabel` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `mne-icalabel, mne-icalabel-onnx` can be installed with `conda`:
 
 ```
-conda install mne-icalabel
+conda install mne-icalabel mne-icalabel-onnx
 ```
 
 or with `mamba`:
 
 ```
-mamba install mne-icalabel
+mamba install mne-icalabel mne-icalabel-onnx
 ```
 
 It is possible to list all of the versions of `mne-icalabel` available on your platform with `conda`:
