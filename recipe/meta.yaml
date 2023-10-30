@@ -50,7 +50,7 @@ outputs:
         - pip check
         - mne_icalabel-sys_info
 
-  - name: mne-icalabel-pytorch
+  - name: mne-icalabel
     requirements:
       run:
         - {{ pin_subpackage('mne-icalabel-base', max_pin="x.x.x.x") }}
