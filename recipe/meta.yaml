@@ -9,11 +9,12 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cf3c2031a01de9f95ff5af6743137afaab23fd9a48b95f22a4264eb50c23ddbd
 
-build:
-  number: 0
+requirements:
+  run:
+    - mne-icalabel-pytorch
 
 outputs:
-  - name: mne-icalabel
+  - name: mne-icalabel-pytorch
     build:
       noarch: python
       script: {{ PYTHON }} -m pip install . -vv
