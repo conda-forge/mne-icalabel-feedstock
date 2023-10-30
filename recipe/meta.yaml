@@ -12,16 +12,11 @@ source:
 build:
   number: 0
 
-requirements:
-  run:
-    - mne-icalabel-pytorch
-
 outputs:
-  - name: mne-icalabel-pytorch
+  - name: mne-icalabel-base
     build:
       noarch: python
       script: python -m pip install . -vv
-      number: 0
       entry_points:
         - mne_icalabel-sys_info = mne_icalabel.commands.sys_info:run
         - mne_gui_ic_annotation = mne_icalabel.commands.mne_gui_ic_annotation:main
@@ -42,7 +37,6 @@ outputs:
         - psutil
         - python >=3.9
         - python-picard  # ICA
-        - pytorch
         - qtpy  # GUI
         - scikit-learn  # ICA
         - scipy >=1.2.0
@@ -56,35 +50,11 @@ outputs:
         - pip check
         - mne_icalabel-sys_info
 
-  - name: mne-icalabel-onnx
-    build:
-      noarch: python
-      script: python -m pip install . -vv
-      number: 0
-      entry_points:
-        - mne_icalabel-sys_info = mne_icalabel.commands.sys_info:run
-        - mne_gui_ic_annotation = mne_icalabel.commands.mne_gui_ic_annotation:main
-
+  - name: mne-icalabel-pytorch
     requirements:
-      host:
-        - pip
-        - python >=3.9
-        - setuptools >=64.0.0
       run:
-        - joblib  # ICA
-        - matplotlib-base  # GUI
-        - mne-base >=1.2
-        - mne-qt-browser  # GUI
-        - numpy >=1.21
-        - onnxruntime
-        - packaging
-        - pooch
-        - psutil
-        - python >=3.9
-        - python-picard  # ICA
-        - qtpy  # GUI
-        - scikit-learn  # ICA
-        - scipy >=1.2.0
+        - {{ pin_subpackage('mne-icalabel-base', max_pin="x.x.x.x") }}
+        - pytorch
 
     test:
       imports:
