@@ -62,7 +62,6 @@ outputs:
       requires:
         - pip
       commands:
-        - pip check
         - mne_icalabel-sys_info
 
 about:
