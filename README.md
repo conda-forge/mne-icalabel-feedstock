@@ -15,11 +15,44 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16134&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mne-icalabel-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16134&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mne-icalabel-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16134&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mne-icalabel-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16134&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mne-icalabel-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16134&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mne-icalabel-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -29,8 +62,8 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-mne--icalabel-green.svg)](https://anaconda.org/conda-forge/mne-icalabel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mne-icalabel.svg)](https://anaconda.org/conda-forge/mne-icalabel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mne-icalabel.svg)](https://anaconda.org/conda-forge/mne-icalabel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mne-icalabel.svg)](https://anaconda.org/conda-forge/mne-icalabel) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-mne--icalabel--onnx-green.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mne-icalabel-onnx.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mne-icalabel-onnx.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mne-icalabel-onnx.svg)](https://anaconda.org/conda-forge/mne-icalabel-onnx) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mne--icalabel--base-green.svg)](https://anaconda.org/conda-forge/mne-icalabel-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mne-icalabel-base.svg)](https://anaconda.org/conda-forge/mne-icalabel-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mne-icalabel-base.svg)](https://anaconda.org/conda-forge/mne-icalabel-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mne-icalabel-base.svg)](https://anaconda.org/conda-forge/mne-icalabel-base) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mne--icalabel--pytorch-green.svg)](https://anaconda.org/conda-forge/mne-icalabel-pytorch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mne-icalabel-pytorch.svg)](https://anaconda.org/conda-forge/mne-icalabel-pytorch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mne-icalabel-pytorch.svg)](https://anaconda.org/conda-forge/mne-icalabel-pytorch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mne-icalabel-pytorch.svg)](https://anaconda.org/conda-forge/mne-icalabel-pytorch) |
 
 Installing mne-icalabel
 =======================
@@ -42,41 +75,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mne-icalabel, mne-icalabel-onnx` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `mne-icalabel-base, mne-icalabel-pytorch` can be installed with `conda`:
 
 ```
-conda install mne-icalabel mne-icalabel-onnx
-```
-
-or with `mamba`:
-
-```
-mamba install mne-icalabel mne-icalabel-onnx
-```
-
-It is possible to list all of the versions of `mne-icalabel` available on your platform with `conda`:
-
-```
-conda search mne-icalabel --channel conda-forge
+conda install mne-icalabel-base mne-icalabel-pytorch
 ```
 
 or with `mamba`:
 
 ```
-mamba search mne-icalabel --channel conda-forge
+mamba install mne-icalabel-base mne-icalabel-pytorch
+```
+
+It is possible to list all of the versions of `mne-icalabel-base` available on your platform with `conda`:
+
+```
+conda search mne-icalabel-base --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search mne-icalabel-base --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search mne-icalabel --channel conda-forge
+mamba repoquery search mne-icalabel-base --channel conda-forge
 
-# List packages depending on `mne-icalabel`:
-mamba repoquery whoneeds mne-icalabel --channel conda-forge
+# List packages depending on `mne-icalabel-base`:
+mamba repoquery whoneeds mne-icalabel-base --channel conda-forge
 
-# List dependencies of `mne-icalabel`:
-mamba repoquery depends mne-icalabel --channel conda-forge
+# List dependencies of `mne-icalabel-base`:
+mamba repoquery depends mne-icalabel-base --channel conda-forge
 ```
 
 
