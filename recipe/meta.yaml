@@ -59,8 +59,6 @@ outputs:
     test:
       imports:
         - mne_icalabel
-      requires:
-        - pip
       commands:
         - mne_icalabel-sys_info
 
