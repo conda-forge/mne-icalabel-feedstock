@@ -20,7 +20,7 @@ outputs:
   - name: mne-icalabel-pytorch
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
+      script: python -m pip install . -vv
       number: 0
       entry_points:
         - mne_icalabel-sys_info = mne_icalabel.commands.sys_info:run
@@ -59,7 +59,7 @@ outputs:
   - name: mne-icalabel-onnx
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
+      script: python -m pip install . -vv
       number: 0
       entry_points:
         - mne_icalabel-sys_info = mne_icalabel.commands.sys_info:run
