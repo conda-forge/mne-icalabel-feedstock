@@ -1,5 +1,5 @@
 {% set name = "mne-icalabel" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: ce41560ea184fc5e327c8a2ad7f3d4aa5f4a7d844e25148acfff6b9623907187
+  sha256: 85c674ef96f39fa6e9bfd8d359fc7e84f05d5fa43e3ade332ef95a7209386614
 
 build:
   noarch: python
