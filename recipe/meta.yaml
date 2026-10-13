@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mne_icalabel-sys_info = mne_icalabel.commands.sys_info:run
     - mne_gui_ic_annotation = mne_icalabel.commands.mne_gui_ic_annotation:main
@@ -21,7 +21,8 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=64.0.0
+    - setuptools >=77
+    - setuptools-scm >=8
   run:
     - joblib  # ICA
     - matplotlib-base  # GUI
@@ -47,6 +48,7 @@ test:
   commands:
     - pip check
     - mne_icalabel-sys_info
+    - python -c "import importlib.metadata as m, mne_icalabel; assert m.version('mne-icalabel') == mne_icalabel.__version__ == '{{ version }}', (m.version('mne-icalabel'), mne_icalabel.__version__)"
 
 about:
   home: https://mne.tools/mne-icalabel/stable/
